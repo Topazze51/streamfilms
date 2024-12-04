@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming By Topazze</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Garamond', serif;
+            background-color: #1c1c1c;
+            color: #d4af37;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin: 20px;
+            color: #b22222;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .poster img {
+            width: 100%;
+            max-width: 300px;
+            border: 3px solid #d4af37;
+            box-shadow: 0 0 15px #000;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin: 20px 0;
+        }
+
+        button {
+            background-color: #b22222;
+            border: none;
+            padding: 15px 25px;
+            margin: 10px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d4af37;
+            color: #1c1c1c;
+        }
+
+        video {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .synopsis {
+            text-align: justify;
+            line-height: 1.6;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Streaming By Topazze</h1>
+
+    <div class="content">
+        <h2>Edge of Tomorrow</h2>
+
+        <!-- Poster -->
+        <div class="poster">
+            <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/uUHvlkLavotfGsNtosDy8ShsIYF.jpg" alt="Edge of Tomorrow">
+        </div>
+
+        <!-- Synopsis -->
+        <div class="synopsis">
+            <p>
+                Dans un futur proche, des hordes d'extraterrestres ont livré une bataille acharnée contre la Terre. Le commandant
+                Cage, qui n'a jamais combattu, se retrouve malgré lui impliqué dans ce conflit et piégé dans une boucle temporelle.
+                Contraint de revivre sans cesse le même combat, il va s'améliorer et tenter de sauver l'humanité.
+            </p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button id="watchButton">Regarder</button>
+            <button onclick="window.open('https://www.themoviedb.org/movie/137113-edge-of-tomorrow', '_blank')">Détails du Film</button>
+        </div>
+
+        <!-- Video Player -->
+        <video id="videoPlayer" controls>
+            <source src="https://myfiles.debrid.it/cw8ncl15g4/links/Edge%20of%20Tomorrow%20%282014%29%20%5B1080p%5D%20MULTi%20BluRay%20x264-PopHD.mkv" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
+    </div>
+
+    <script>
+        // Gestion du bouton "Regarder"
+        document.getElementById('watchButton').addEventListener('click', function () {
+            const video = document.getElementById('videoPlayer');
+            video.style.display = 'block';
+            video.play();
+        });
+    </script>
+</body>
+
+</html>
